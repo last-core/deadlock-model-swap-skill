@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Blender / Source 2 assets and build output
+*.blend
+*.blend1
+*.blend2
+*.dmx
+*.vpk
+*.vmdl
+*.vmdl_c
+*.vmat
+*.vmat_c
+*.vtex
+*.vtex_c
+*.vnmskel
+*.vnmskel_c
+*.vnmclip
+*.vnmclip_c
+
+# Local configs and scratch files
+project.local.json
+*.log

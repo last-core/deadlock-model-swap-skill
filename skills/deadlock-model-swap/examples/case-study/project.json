@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "notes": "Worked example only. Paths are placeholders; stock values marked 0 or truncated must be re-measured for a new hero. The hero-specific names and measurements are retained to document the original case study.",
+  "game": {
+    "build": "<GAME_BUILD>",
+    "install_dir": "<GAME_INSTALL_DIR>",
+    "content_addon_dir": "<CONTENT_ADDON_DIR>",
+    "game_addon_dir": "<GAME_ADDON_DIR>",
+    "staging_dir": "<STAGING_DIR>"
+  },
+  "hero": {
+    "display_name": "Silver",
+    "model_asset": "werewolf",
+    "panorama_key": "werewolf",
+    "model_path": "models/heroes_wip/werewolf/werewolf.vmdl",
+    "skeleton": {
+      "bone_count": 160,
+      "bone_names": [
+        "pelvis",
+        "spine_0",
+        "spine_1",
+        "spine_2",
+        "spine_3",
+        "neck_0",
+        "head",
+        "hand_L",
+        "hand_R"
+      ],
+      "spine_chain": [
+        "pelvis",
+        "spine_0",
+        "spine_1",
+        "spine_2",
+        "spine_3",
+        "neck_0",
+        "head"
+      ],
+      "bind_transforms": "stock_skeleton.json",
+      "note": "Bone list is truncated for the example. The real file contains all stock bones."
+    },
+    "hitbox_sets": [
+      "<copy stock hitbox sets>"
+    ],
+    "attachments": [
+      "<copy stock attachments>"
+    ],
+    "camera": {
+      "note": "Copy the stock camera offsets and FOV exactly."
+    },
+    "bodygroups": [
+      "<copy stock bodygroup names and choices>"
+    ],
+    "lods": [
+      "<copy stock LOD groups and thresholds>"
+    ]
+  },
+  "source": {
+    "format": "mmd",
+    "mesh_object": "werewolf_model",
+    "armature_object": "werewolf",
+    "vertex_groups": 644,
+    "mapping_module": "examples/case-study/scripts/mmd_map2.py",
+    "up_axis": "Z",
+    "forward_axis": "Y",
+    "depth_axis": "Y",
+    "side_axis": "X",
+    "align_axes": "depth",
+    "compact_groups": [
+      "eye_0_L",
+      "eye_0_R",
+      "finger_index_2_L",
+      "finger_index_2_R",
+      "hand_L",
+      "hand_R",
+      "ankle_L",
+      "ankle_R"
+    ],
+    "long_axis": "Y",
+    "muzzle_axis": "-Y"
+  },
+  "units": {
+    "source": "m",
+    "target": "in",
+    "scale": 39.37
+  },
+  "weights": {
+    "smooth_iters": 4,
+    "smooth_factor": 0.5,
+    "max_influences": 4,
+    "cull": 0.001,
+    "fallback_bone": "",
+    "max_p99": null,
+    "force_material": "レッドフード",
+    "force_chain": [
+      "neck_0",
+      "spine_3",
+      "tail_0",
+      "tail_1",
+      "tail_2",
+      "tail_3",
+      "tail_4",
+      "tail_5",
+      "tail_end"
+    ],
+    "force_root_coord": 1.99,
+    "force_tip_coord": 0.17
+  },
+  "stock": {
+    "body_tris": 0,
+    "body_verts": 0,
+    "tri_budget": 184102,
+    "materials": [
+      "werewolf_head",
+      "werewolf_skin",
+      "werewolf_eye",
+      "werewolf_teeth",
+      "werewolf_hair",
+      "werewolf_upper",
+      "werewolf_upper_b",
+      "werewolf_lower",
+      "werewolf_metal",
+      "werewolf_metal_b",
+      "werewolf_emit"
+    ],
+    "portrait_sizes": {
+      "card": [
+        240,
+        320
+      ],
+      "card_critical": [
+        240,
+        320
+      ],
+      "card_gloat": [
+        240,
+        320
+      ],
+      "mm": [
+        50,
+        50
+      ],
+      "sm": [
+        50,
+        50
+      ],
+      "vertical": [
+        240,
+        320
+      ]
+    },
+    "weapon": {
+      "bone": "weapon",
+      "mesh_name": "primary_weapon",
+      "bbox_local": {
+        "lo": [
+          -0.041,
+          -0.205,
+          -0.505
+        ],
+        "hi": [
+          0.041,
+          0.207,
+          0.737
+        ]
+      },
+      "long_axis": "Z",
+      "up_axis": "Y",
+      "muzzle_axis": "Z"
+    },
+    "note": "body_tris/body_verts were not recorded for the stock hero; 0 means measure them. tri_budget is the decimated source count from the reference project. The materials list is the mod's 11 output slots, not the stock hero's material names."
+  },
+  "paths": {
+    "blender": "<BLENDER_EXE>",
+    "resourcecompiler_game": "<GAME_RESOURCECOMPILER>",
+    "resourcecompiler_sdk": "<SDK_RESOURCECOMPILER>",
+    "source2viewer": "<SOURCE2VIEWER_CLI>",
+    "vpk_tool": "<VPK_TOOL>",
+    "material_dir": "<MATERIALS_DIR>"
+  },
+  "tool_versions": {
+    "blender": "4.x",
+    "dmx_addon": "io_scene_valvesource2",
+    "csdk": "12",
+    "source2viewer": "20.0+"
+  },
+  "gates": {
+    "setup": "pass",
+    "rig_align": "pass",
+    "decimate": "pass",
+    "weights": "pass",
+    "materials": "pass",
+    "export": "pass",
+    "modeldoc": "pass",
+    "animgraph2": "pass",
+    "weapon": "pass",
+    "portraits": "pass",
+    "validate": "pass"
+  }
+}
